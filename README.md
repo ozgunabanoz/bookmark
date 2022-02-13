@@ -20,25 +20,25 @@ To list books from Google Books API, you don't need credentials. But adding, lis
 
 - GET /books: Lists books from Google Books API based on the query parameters.
 
-  Query parameters:
+Query parameters:
 
-        {
-            "title": "",
-            "author": "",
-            "keyword: "",
-            "limit": 10, // optional. min 10, max 50. default 10.
-            "startIndex": 0 // optional. default 0.
-        }
+    {
+        "title": "",
+        "author": "",
+        "keyword: "",
+        "limit": 10, // optional. min 10, max 50. default 10.
+        "startIndex": 0 // optional. default 0.
+    }
 
-  From title, author and keyword parameters, at least one of them must be present in the request. Limit and startIndex are optional parameters.
+From title, author and keyword parameters, at least one of them must be present in the request. Limit and startIndex are optional parameters.
 
 - GET /bookmark: Lists user's bookmarks. You need a valid jwt token for this operation. You have to sign up or logged in to your account first to obtain a token.
 
 Header format should be like this:
 
-        {
-            "Authorization": "Bearer {{token}}"
-        }
+    {
+        "Authorization": "Bearer {{token}}"
+    }
 
 Query parameters:
 
@@ -49,27 +49,27 @@ Query parameters:
 
 - POST /bookmark: For adding a new bookmark.
 
-  Header format:
+Header format:
 
-        {
-            "Authorization": "Bearer {{token}}"
-        }
+    {
+        "Authorization": "Bearer {{token}}"
+    }
 
-  Request body:
+Request body:
 
-        {
-            "googleId": "" // you need to have valid googleId for the book
-        }
+    {
+        "googleId": "" // you need to have valid googleId for the book
+    }
 
 - DELETE /bookmark/id: For deleting a bookmark.
 
-  Header format:
+Header format:
 
       {
           "Authorization": "Bearer {{token}}"
       }
 
-  Path variables:
+Path variables:
 
       {
           "id": "" // you need to have valid book id
@@ -77,18 +77,18 @@ Query parameters:
 
 - POST /auth/signup: For registering.
 
-  Request body:
+Request body:
 
-        {
-            "email": "",
-            "password: "" // minimum 8 characters long
-        }
+    {
+        "email": "",
+        "password: "" // minimum 8 characters long
+    }
 
 - POST /auth/login: For logging in.
 
-  Request body:
+Request body:
 
-        {
-            "email": "",
-            "password: ""
-        }
+    {
+        "email": "",
+        "password: ""
+    }

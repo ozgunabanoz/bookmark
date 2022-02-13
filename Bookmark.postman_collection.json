@@ -1,0 +1,1081 @@
+{
+	"info": {
+		"_postman_id": "3fbe6a54-e5ca-42fb-a16a-dec2d907e674",
+		"name": "Bookmark",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "DELETE /bookmark/:id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwiaWF0IjoxNjQ0NzU0OTYzLCJleHAiOjE2NDQ3NTg1NjN9.5GTiv2NoVzXvEU89qycfnnEV0lRk_Wpu4dtdlfnG4dc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/bookmark/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bookmark",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "7"
+						}
+					]
+				},
+				"description": "Needs bookmark id as path variable and jwt token in Authorization header (e.g Authorization: Bearer token)"
+			},
+			"response": [
+				{
+					"name": "Delete Bookmark Success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwiaWF0IjoxNjQ0NzU0OTYzLCJleHAiOjE2NDQ3NTg1NjN9.5GTiv2NoVzXvEU89qycfnnEV0lRk_Wpu4dtdlfnG4dc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/bookmark/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bookmark",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "44"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2c-QeZ4GjwiGw/DUQ8Pk61iQcGeqpA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Feb 2022 12:27:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Success\",\n    \"status\": 200,\n    \"data\": {}\n}"
+				},
+				{
+					"name": "Delete Bookmark Error",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwiaWF0IjoxNjQ0NzU0OTYzLCJleHAiOjE2NDQ3NTg1NjN9.5GTiv2NoVzXvEU89qycfnnEV0lRk_Wpu4dtdlfnG4dc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/bookmark/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bookmark",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "60"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3c-JZf+uteMSYoGuvSEgY35QOEAXr4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Feb 2022 12:27:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Bookmark does not exist\",\n    \"status\": 400,\n    \"data\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "GET /bookmark",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwiaWF0IjoxNjQ0NzU0OTYzLCJleHAiOjE2NDQ3NTg1NjN9.5GTiv2NoVzXvEU89qycfnnEV0lRk_Wpu4dtdlfnG4dc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/bookmark",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bookmark"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "50",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "0",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Lists user's bookmarks. Needs jwt token in the authorization header."
+			},
+			"response": [
+				{
+					"name": "List Bookmarks Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwiaWF0IjoxNjQ0NzU0OTYzLCJleHAiOjE2NDQ3NTg1NjN9.5GTiv2NoVzXvEU89qycfnnEV0lRk_Wpu4dtdlfnG4dc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/bookmark",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bookmark"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "318"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"13e-KtPwoagr2tshL0H5U2GGuS6hT1Q\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Feb 2022 12:25:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Success\",\n    \"status\": 200,\n    \"data\": [\n        {\n            \"id\": 7,\n            \"googleId\": \"MX9JDAAAQBAJ\",\n            \"title\": \"The Sound and the Fury (Third Edition) (Norton Critical Editions)\",\n            \"author\": \"William Faulkner\",\n            \"UserId\": 3\n        },\n        {\n            \"id\": 8,\n            \"googleId\": \"fvwLjVZRlpsC\",\n            \"title\": \"The Tangled Fire of William Faulkner\",\n            \"author\": \"William Van O'Connor\",\n            \"UserId\": 3\n        }\n    ]\n}"
+				},
+				{
+					"name": "List Bookmarks Error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/bookmark",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bookmark"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "49"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"31-W6IAt4cDgD5sMzw/oWpG+5Nb+yM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Feb 2022 12:25:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Unauthorized\",\n    \"status\": 401,\n    \"data\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "GET /books",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/book?title=The Sound and the Fury&author=William Faulkner&limit=10&startIndex=0&keyword=gothic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"book"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "The Sound and the Fury"
+						},
+						{
+							"key": "author",
+							"value": "William Faulkner"
+						},
+						{
+							"key": "limit",
+							"value": "10",
+							"description": "Minimum 10, maximum 50, default 10"
+						},
+						{
+							"key": "startIndex",
+							"value": "0",
+							"description": "default 0"
+						},
+						{
+							"key": "keyword",
+							"value": "gothic"
+						}
+					]
+				},
+				"description": "From title, author and keyword parameters, at least one of them must be present in the request."
+			},
+			"response": [
+				{
+					"name": "GET Books Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/book?title=The Sound and the Fury&author=William Faulkner&limit=10&startIndex=0&keyword=gothic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"book"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "The Sound and the Fury"
+								},
+								{
+									"key": "author",
+									"value": "William Faulkner"
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"description": "Minimum 10, maximum 50, default 10"
+								},
+								{
+									"key": "startIndex",
+									"value": "0",
+									"description": "default 0"
+								},
+								{
+									"key": "keyword",
+									"value": "gothic"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "17756"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"455c-AzAjM75wNTm2rdDRg67cQPvR02M\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Feb 2022 11:43:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Success\",\n    \"status\": 200,\n    \"data\": [\n        {\n            \"kind\": \"books#volume\",\n            \"id\": \"MX9JDAAAQBAJ\",\n            \"etag\": \"V1rDOGrzkxY\",\n            \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/MX9JDAAAQBAJ\",\n            \"volumeInfo\": {\n                \"title\": \"The Sound and the Fury (Third Edition) (Norton Critical Editions)\",\n                \"authors\": [\n                    \"William Faulkner\"\n                ],\n                \"publisher\": \"W. W. Norton & Company\",\n                \"publishedDate\": \"2014-02-11\",\n                \"description\": \"“A man is the sum of his misfortunes.” —William Faulkner, The Sound and the Fury William Faulkner’s provocative and enigmatic 1929 novel, The Sound and the Fury, is widely acknowledged as one of the most important English-language novels of the twentieth century. This revised and expanded Norton Critical Edition builds on the strengths of its predecessors while focusing new attention on both the novel’s contemporary reception and its rich cultural and historical contexts. The text for the Third Edition is again that of the corrected text scrupulously prepared by Noel Polk, whose textual note precedes the novel. David Minter’s annotations, designed to assist readers with obscure words and allusions, have been retained. “Contemporary Reception,” new to the Third Edition, considers the broad range of reactions to Faulkner’s extraordinary novel on publication. Michael Gorra’s headnote sets the stage for assessments by Evelyn Scott, Henry Nash Smith, Clifton P. Fadiman, Dudley Fitts, Richard Hughes, and Edward Crickmay. New materials by Faulkner (“The Writer and His Work”) include letters to Malcolm Cowley about The Portable Faulkner and Faulkner’s Nobel Prize for Literature address. “Cultural and Historical Contexts” begins with Michael Gorra’s insightful headnote, which is followed by seven seminal considerations—five of them new to the Third Edition—of southern history, literature, and memory. Together, these works—by C. Vann Woodward, Richard H. King, Richard Gray, William Alexander Percy, Lillian Smith, William James, and Henri Bergson—provide readers with important contexts for understanding the novel. “Criticism” represents eighty-five years of scholarly engagement with The Sound and the Fury. New to the Third Edition are essays by Eric Sundquist, Noel Polk, Doreen Fowler, Richard Godden, Stacy Burton, and Maria Truchan-Tataryn. A Chronology of Faulkner’s life and work is newly included along with an updated Selected Bibliography.\",\n                \"industryIdentifiers\": [\n                    {\n                        \"type\": \"ISBN_13\",\n                        \"identifier\": \"9781324000822\"\n                    },\n                    {\n                        \"type\": \"ISBN_10\",\n                        \"identifier\": \"1324000821\"\n                    }\n                ],\n                \"readingModes\": {\n                    \"text\": true,\n                    \"image\": false\n                },\n                \"pageCount\": 544,\n                \"printType\": \"BOOK\",\n                \"categories\": [\n                    \"Fiction\"\n                ],\n                \"maturityRating\": \"NOT_MATURE\",\n                \"allowAnonLogging\": false,\n                \"contentVersion\": \"1.2.2.0.preview.2\",\n                \"panelizationSummary\": {\n                    \"containsEpubBubbles\": false,\n                    \"containsImageBubbles\": false\n                },\n                \"imageLinks\": {\n                    \"smallThumbnail\": \"http://books.google.com/books/content?id=MX9JDAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n                    \"thumbnail\": \"http://books.google.com/books/content?id=MX9JDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n                },\n                \"language\": \"en\",\n                \"previewLink\": \"http://books.google.com.tr/books?id=MX9JDAAAQBAJ&pg=PT206&dq=gothic%2Bintitle:the+sound+and+the+fury%2Binauthor:william+faulkner&hl=&cd=1&source=gbs_api\",\n                \"infoLink\": \"http://books.google.com.tr/books?id=MX9JDAAAQBAJ&dq=gothic%2Bintitle:the+sound+and+the+fury%2Binauthor:william+faulkner&hl=&source=gbs_api\",\n                \"canonicalVolumeLink\": \"https://books.google.com/books/about/The_Sound_and_the_Fury_Third_Edition_Nor.html?hl=&id=MX9JDAAAQBAJ\"\n            },\n            \"saleInfo\": {\n                \"country\": \"TR\",\n                \"saleability\": \"NOT_FOR_SALE\",\n                \"isEbook\": false\n            },\n            \"accessInfo\": {\n                \"country\": \"TR\",\n                \"viewability\": \"PARTIAL\",\n                \"embeddable\": true,\n                \"publicDomain\": false,\n                \"textToSpeechPermission\": \"ALLOWED\",\n                \"epub\": {\n                    \"isAvailable\": true,\n                    \"acsTokenLink\": \"http://books.google.com.tr/books/download/The_Sound_and_the_Fury_Third_Edition_Nor-sample-epub.acsm?id=MX9JDAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n                },\n                \"pdf\": {\n                    \"isAvailable\": false\n                },\n                \"webReaderLink\": \"http://play.google.com/books/reader?id=MX9JDAAAQBAJ&hl=&printsec=frontcover&source=gbs_api\",\n                \"accessViewStatus\": \"SAMPLE\",\n                \"quoteSharingAllowed\": false\n            },\n            \"searchInfo\": {\n                \"textSnippet\": \"William <b>Faulkner</b> Michael Gorra ... But more important perhaps than the ethical residue left in our minds was the process of this learning which gave our emotions their <b>Gothic</b> curves. Our first lesson about God made the deepest&nbsp;...\"\n            }\n        },\n        {\n            \"kind\": \"books#volume\",\n            \"id\": \"6QmIUTon5DwC\",\n            \"etag\": \"VBvhzPBCRos\",\n            \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/6QmIUTon5DwC\",\n            \"volumeInfo\": {\n                \"title\": \"The Sound and the Fury\",\n                \"authors\": [\n                    \"William Faulkner\"\n                ],\n                \"publishedDate\": \"1970\",\n                \"industryIdentifiers\": [\n                    {\n                        \"type\": \"ISBN_10\",\n                        \"identifier\": \"067973225X\"\n                    },\n                    {\n                        \"type\": \"ISBN_13\",\n                        \"identifier\": \"9780679732259\"\n                    }\n                ],\n                \"readingModes\": {\n                    \"text\": false,\n                    \"image\": false\n                },\n                \"pageCount\": 267,\n                \"printType\": \"BOOK\",\n                \"categories\": [\n                    \"Burial\"\n                ],\n                \"averageRating\": 4,\n                \"ratingsCount\": 32,\n                \"maturityRating\": \"NOT_MATURE\",\n                \"allowAnonLogging\": false,\n                \"contentVersion\": \"0.2.2.0.preview.0\",\n                \"panelizationSummary\": {\n                    \"containsEpubBubbles\": false,\n                    \"containsImageBubbles\": false\n                },\n                \"imageLinks\": {\n                    \"smallThumbnail\": \"http://books.google.com/books/content?id=6QmIUTon5DwC&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n                    \"thumbnail\": \"http://books.google.com/books/content?id=6QmIUTon5DwC&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n                },\n                \"language\": \"en\",\n                \"previewLink\": \"http://books.google.com.tr/books?id=6QmIUTon5DwC&q=gothic%2Bintitle:the+sound+and+the+fury%2Binauthor:william+faulkner&dq=gothic%2Bintitle:the+sound+and+the+fury%2Binauthor:william+faulkner&hl=&cd=2&source=gbs_api\",\n                \"infoLink\": \"http://books.google.com.tr/books?id=6QmIUTon5DwC&dq=gothic%2Bintitle:the+sound+and+the+fury%2Binauthor:william+faulkner&hl=&source=gbs_api\",\n                \"canonicalVolumeLink\": \"https://books.google.com/books/about/The_Sound_and_the_Fury.html?hl=&id=6QmIUTon5DwC\"\n            },\n            \"saleInfo\": {\n                \"country\": \"TR\",\n                \"saleability\": \"NOT_FOR_SALE\",\n                \"isEbook\": false\n            },\n            \"accessInfo\": {\n                \"country\": \"TR\",\n                \"viewability\": \"NO_PAGES\",\n                \"embeddable\": false,\n                \"publicDomain\": false,\n                \"textToSpeechPermission\": \"ALLOWED\",\n                \"epub\": {\n                    \"isAvailable\": false\n                },\n                \"pdf\": {\n                    \"isAvailable\": false\n                },\n                \"webReaderLink\": \"http://play.google.com/books/reader?id=6QmIUTon5DwC&hl=&printsec=frontcover&source=gbs_api\",\n                \"accessViewStatus\": \"NONE\",\n                \"quoteSharingAllowed\": false\n            },\n            \"searchInfo\": {\n                \"textSnippet\": \"William <b>Faulkner</b>. VINTAGE INTERNATIONAL $ 12.00 $ 12.00 $ 10.00 $ 12.00 $ 13.00 0-679-73678-6 0-679-73590-9 0-679-74227-1 0-679-73829-0 0-679-73348-5 $ 10.00 0-679-74237-9 $ 10.00 $ 9.00 $ 9.00 0-679-73385 - X 0-679-72022-7&nbsp;...\"\n            }\n        },\n        {\n            \"kind\": \"books#volume\",\n            \"id\": \"fvwLjVZRlpsC\",\n            \"etag\": \"YphaeVoaSPU\",\n            \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/fvwLjVZRlpsC\",\n            \"volumeInfo\": {\n                \"title\": \"The Tangled Fire of William Faulkner\",\n                \"authors\": [\n                    \"William Van O'Connor\"\n                ],\n                \"publisher\": \"U of Minnesota Press\",\n                \"publishedDate\": \"1954\",\n                \"description\": \"The Tangled Fire of William Faulkner was first published in 1953. Minnesota Archive Editions uses digital technology to make long-unavailable books once again accessible, and are published unaltered from the original University of Minnesota Press editions. Out of the tangled fire that is the genius of William Faulkner's fiction, this critical study draws as coherent and highly original view of the writer's achievement. By placing Faulkner in his Mississippi background and analyzing his novels and short stories in chronological sequence, O'Conner demonstrates a major thesis that sets this apart from other studies. It is his interpretation that Faulkner's fiction is not all of a piece, does not merely develop the conviction of the legend of the Old South, but is, rather, marked by diversity of theme.\",\n                \"industryIdentifiers\": [\n                    {\n                        \"type\": \"ISBN_10\",\n                        \"identifier\": \"0816659974\"\n                    },\n                    {\n                        \"type\": \"ISBN_13\",\n                        \"identifier\": \"9780816659975\"\n                    }\n                ],\n                \"readingModes\": {\n                    \"text\": true,\n                    \"image\": true\n                },\n                \"pageCount\": 182,\n                \"printType\": \"BOOK\",\n                \"categories\": [\n                    \"Literary Criticism\"\n                ],\n                \"maturityRating\": \"NOT_MATURE\",\n                \"allowAnonLogging\": false,\n                \"contentVersion\": \"0.1.2.0.preview.3\",\n                \"imageLinks\": {\n                    \"smallThumbnail\": \"http://books.google.com/books/content?id=fvwLjVZRlpsC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n                    \"thumbnail\": \"http://books.google.com/books/content?id=fvwLjVZRlpsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n                },\n                \"language\": \"en\",\n                \"previewLink\": \"http://books.google.com.tr/books?id=fvwLjVZRlpsC&pg=PA161&dq=gothic%2Bintitle:the+sound+and+the+fury%2Binauthor:william+faulkner&hl=&cd=3&source=gbs_api\",\n                \"infoLink\": \"http://books.google.com.tr/books?id=fvwLjVZRlpsC&dq=gothic%2Bintitle:the+sound+and+the+fury%2Binauthor:william+faulkner&hl=&source=gbs_api\",\n                \"canonicalVolumeLink\": \"https://books.google.com/books/about/The_Tangled_Fire_of_William_Faulkner.html?hl=&id=fvwLjVZRlpsC\"\n            },\n            \"saleInfo\": {\n                \"country\": \"TR\",\n                \"saleability\": \"NOT_FOR_SALE\",\n                \"isEbook\": false\n            },\n            \"accessInfo\": {\n                \"country\": \"TR\",\n                \"viewability\": \"PARTIAL\",\n                \"embeddable\": true,\n                \"publicDomain\": false,\n                \"textToSpeechPermission\": \"ALLOWED\",\n                \"epub\": {\n                    \"isAvailable\": true,\n                    \"acsTokenLink\": \"http://books.google.com.tr/books/download/The_Tangled_Fire_of_William_Faulkner-sample-epub.acsm?id=fvwLjVZRlpsC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n                },\n                \"pdf\": {\n                    \"isAvailable\": false\n                },\n                \"webReaderLink\": \"http://play.google.com/books/reader?id=fvwLjVZRlpsC&hl=&printsec=frontcover&source=gbs_api\",\n                \"accessViewStatus\": \"SAMPLE\",\n                \"quoteSharingAllowed\": false\n            },\n            \"searchInfo\": {\n                \"textSnippet\": \"In The <b>Sound and the Fury</b> the consciousness of three characters is revealed as though the reader lived successively in ... Most of the remaining stories are episodic, but each has its special devices : the <b>Gothic</b> framework of Absalom,&nbsp;...\"\n            }\n        },\n        {\n            \"kind\": \"books#volume\",\n            \"id\": \"jmi9bKpirnoC\",\n            \"etag\": \"qEA9Bk0wejc\",\n            \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/jmi9bKpirnoC\",\n            \"volumeInfo\": {\n                \"title\": \"The Wild Palms\",\n                \"subtitle\": \"[If I Forget Thee, Jerusalem]\",\n                \"authors\": [\n                    \"William Faulkner\"\n                ],\n                \"publisher\": \"Vintage\",\n                \"publishedDate\": \"2011-05-18\",\n                \"description\": \"In this feverishly beautiful novel—originally titled If I Forget Thee, Jerusalem by Faulkner, and now published in the authoritative Library of America text—William Faulkner interweaves two narratives, each wholly absorbing in its own right, each subtly illuminating the other. In New Orleans in 1937, a man and a woman embark on a headlong flight into the wilderness of illicit passion, fleeing her husband and the temptations of respectability. In Mississippi ten years earlier, a convict sets forth across a flooded river, risking his own chance at freedom to rescue a pregnant woman. From these separate stories Faulkner composes a symphony of deliverance and damnation, survival and self-sacrifice, a novel in which elemental danger is juxtaposed wiht fatal injuries of the spirit. The Wild Palms is grandly inventive, heart-stopping in its prose, and suffused on every page with the physical presence of the country that Faulkner made his own.\",\n                \"industryIdentifiers\": [\n                    {\n                        \"type\": \"ISBN_13\",\n                        \"identifier\": \"9780307792426\"\n                    },\n                    {\n                        \"type\": \"ISBN_10\",\n                        \"identifier\": \"0307792420\"\n                    }\n                ],\n                \"readingModes\": {\n                    \"text\": true,\n                    \"image\": false\n                },\n                \"pageCount\": 304,\n                \"printType\": \"BOOK\",\n                \"categories\": [\n                    \"Fiction\"\n                ],\n                \"maturityRating\": \"NOT_MATURE\",\n                \"allowAnonLogging\": true,\n                \"contentVersion\": \"3.7.4.0.preview.2\",\n                \"panelizationSummary\": {\n                    \"containsEpubBubbles\": false,\n                    \"containsImageBubbles\": false\n                },\n                \"imageLinks\": {\n                    \"smallThumbnail\": \"http://books.google.com/books/content?id=jmi9bKpirnoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n                    \"thumbnail\": \"http://books.google.com/books/content?id=jmi9bKpirnoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n                },\n                \"language\": \"en\",\n                \"previewLink\": \"http://books.google.com.tr/books?id=jmi9bKpirnoC&pg=PA269&dq=gothic%2Bintitle:the+sound+and+the+fury%2Binauthor:william+faulkner&hl=&cd=4&source=gbs_api\",\n                \"infoLink\": \"https://play.google.com/store/books/details?id=jmi9bKpirnoC&source=gbs_api\",\n                \"canonicalVolumeLink\": \"https://play.google.com/store/books/details?id=jmi9bKpirnoC\"\n            },\n            \"saleInfo\": {\n                \"country\": \"TR\",\n                \"saleability\": \"FOR_SALE\",\n                \"isEbook\": true,\n                \"listPrice\": {\n                    \"amount\": 238.33,\n                    \"currencyCode\": \"TRY\"\n                },\n                \"retailPrice\": {\n                    \"amount\": 238.33,\n                    \"currencyCode\": \"TRY\"\n                },\n                \"buyLink\": \"https://play.google.com/store/books/details?id=jmi9bKpirnoC&rdid=book-jmi9bKpirnoC&rdot=1&source=gbs_api\",\n                \"offers\": [\n                    {\n                        \"finskyOfferType\": 1,\n                        \"listPrice\": {\n                            \"amountInMicros\": 238330000,\n                            \"currencyCode\": \"TRY\"\n                        },\n                        \"retailPrice\": {\n                            \"amountInMicros\": 238330000,\n                            \"currencyCode\": \"TRY\"\n                        }\n                    }\n                ]\n            },\n            \"accessInfo\": {\n                \"country\": \"TR\",\n                \"viewability\": \"PARTIAL\",\n                \"embeddable\": true,\n                \"publicDomain\": false,\n                \"textToSpeechPermission\": \"ALLOWED\",\n                \"epub\": {\n                    \"isAvailable\": true,\n                    \"acsTokenLink\": \"http://books.google.com.tr/books/download/The_Wild_Palms-sample-epub.acsm?id=jmi9bKpirnoC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n                },\n                \"pdf\": {\n                    \"isAvailable\": false\n                },\n                \"webReaderLink\": \"http://play.google.com/books/reader?id=jmi9bKpirnoC&hl=&printsec=frontcover&source=gbs_api\",\n                \"accessViewStatus\": \"SAMPLE\",\n                \"quoteSharingAllowed\": false\n            },\n            \"searchInfo\": {\n                \"textSnippet\": \"[If I Forget Thee, Jerusalem] William <b>Faulkner</b>. about it of the carved faces on <b>gothic</b> cathedrals, the pale eyes possessing something of the same unpupilled marble blankness. The judge stared at the District Attorney.\"\n            }\n        },\n        {\n            \"kind\": \"books#volume\",\n            \"id\": \"eobZAAAAMAAJ\",\n            \"etag\": \"WPTkaBJWd5A\",\n            \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/eobZAAAAMAAJ\",\n            \"volumeInfo\": {\n                \"title\": \"The Thomas Merton Encyclopedia\",\n                \"authors\": [\n                    \"William Henry Shannon\",\n                    \"Christine M. Bochen\",\n                    \"Patrick F. O'Connell\"\n                ],\n                \"publishedDate\": \"2002\",\n                \"description\": \"Presents 350 alphabetized entries on American Trappist monk, religious writer, and poet Thomas Merton, covering all of his published works as well as the persons, places, and themes that shaped his life.\",\n                \"industryIdentifiers\": [\n                    {\n                        \"type\": \"OTHER\",\n                        \"identifier\": \"UOM:39015055582640\"\n                    }\n                ],\n                \"readingModes\": {\n                    \"text\": false,\n                    \"image\": false\n                },\n                \"pageCount\": 556,\n                \"printType\": \"BOOK\",\n                \"categories\": [\n                    \"Reference\"\n                ],\n                \"maturityRating\": \"NOT_MATURE\",\n                \"allowAnonLogging\": false,\n                \"contentVersion\": \"0.2.1.0.preview.0\",\n                \"panelizationSummary\": {\n                    \"containsEpubBubbles\": false,\n                    \"containsImageBubbles\": false\n                },\n                \"imageLinks\": {\n                    \"smallThumbnail\": \"http://books.google.com/books/content?id=eobZAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n                    \"thumbnail\": \"http://books.google.com/books/content?id=eobZAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n                },\n                \"language\": \"en\",\n                \"previewLink\": \"http://books.google.com.tr/books?id=eobZAAAAMAAJ&q=gothic%2Bintitle:the+sound+and+the+fury%2Binauthor:william+faulkner&dq=gothic%2Bintitle:the+sound+and+the+fury%2Binauthor:william+faulkner&hl=&cd=5&source=gbs_api\",\n                \"infoLink\": \"http://books.google.com.tr/books?id=eobZAAAAMAAJ&dq=gothic%2Bintitle:the+sound+and+the+fury%2Binauthor:william+faulkner&hl=&source=gbs_api\",\n                \"canonicalVolumeLink\": \"https://books.google.com/books/about/The_Thomas_Merton_Encyclopedia.html?hl=&id=eobZAAAAMAAJ\"\n            },\n            \"saleInfo\": {\n                \"country\": \"TR\",\n                \"saleability\": \"NOT_FOR_SALE\",\n                \"isEbook\": false\n            },\n            \"accessInfo\": {\n                \"country\": \"TR\",\n                \"viewability\": \"NO_PAGES\",\n                \"embeddable\": false,\n                \"publicDomain\": false,\n                \"textToSpeechPermission\": \"ALLOWED\",\n                \"epub\": {\n                    \"isAvailable\": false\n                },\n                \"pdf\": {\n                    \"isAvailable\": false\n                },\n                \"webReaderLink\": \"http://play.google.com/books/reader?id=eobZAAAAMAAJ&hl=&printsec=frontcover&source=gbs_api\",\n                \"accessViewStatus\": \"NONE\",\n                \"quoteSharingAllowed\": false\n            },\n            \"searchInfo\": {\n                \"textSnippet\": \"The final appendix contains transcriptions of two sets of talks given by Merton on <b>Faulkner</b> . “ Time and Unburdening and the Recollection of the Lamb : The Easter Service in <b>Faulkner&#39;s</b> The <b>Sound and the Fury</b> &quot; sets the sermon of the Rev&nbsp;...\"\n            }\n        },\n        {\n            \"kind\": \"books#volume\",\n            \"id\": \"Jr5ZAAAAMAAJ\",\n            \"etag\": \"vyPlUwS1tlM\",\n            \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/Jr5ZAAAAMAAJ\",\n            \"volumeInfo\": {\n                \"title\": \"The Devil in the Fire\",\n                \"subtitle\": \"Retrospective Essays on American Literature and Culture, 1951-1971\",\n                \"authors\": [\n                    \"John W. Aldridge\",\n                    \"John William Aldridge\"\n                ],\n                \"publisher\": \"New York : [Harper's Magazine Press\",\n                \"publishedDate\": \"1972\",\n                \"industryIdentifiers\": [\n                    {\n                        \"type\": \"OTHER\",\n                        \"identifier\": \"UOM:39015066083505\"\n                    }\n                ],\n                \"readingModes\": {\n                    \"text\": false,\n                    \"image\": false\n                },\n                \"pageCount\": 364,\n                \"printType\": \"BOOK\",\n                \"categories\": [\n                    \"American literature\"\n                ],\n                \"maturityRating\": \"NOT_MATURE\",\n                \"allowAnonLogging\": false,\n                \"contentVersion\": \"0.2.1.0.preview.0\",\n                \"panelizationSummary\": {\n                    \"containsEpubBubbles\": false,\n                    \"containsImageBubbles\": false\n                },\n                \"imageLinks\": {\n                    \"smallThumbnail\": \"http://books.google.com/books/content?id=Jr5ZAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n                    \"thumbnail\": \"http://books.google.com/books/content?id=Jr5ZAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n                },\n                \"language\": \"en\",\n                \"previewLink\": \"http://books.google.com.tr/books?id=Jr5ZAAAAMAAJ&q=gothic%2Bintitle:the+sound+and+the+fury%2Binauthor:william+faulkner&dq=gothic%2Bintitle:the+sound+and+the+fury%2Binauthor:william+faulkner&hl=&cd=6&source=gbs_api\",\n                \"infoLink\": \"http://books.google.com.tr/books?id=Jr5ZAAAAMAAJ&dq=gothic%2Bintitle:the+sound+and+the+fury%2Binauthor:william+faulkner&hl=&source=gbs_api\",\n                \"canonicalVolumeLink\": \"https://books.google.com/books/about/The_Devil_in_the_Fire.html?hl=&id=Jr5ZAAAAMAAJ\"\n            },\n            \"saleInfo\": {\n                \"country\": \"TR\",\n                \"saleability\": \"NOT_FOR_SALE\",\n                \"isEbook\": false\n            },\n            \"accessInfo\": {\n                \"country\": \"TR\",\n                \"viewability\": \"NO_PAGES\",\n                \"embeddable\": false,\n                \"publicDomain\": false,\n                \"textToSpeechPermission\": \"ALLOWED\",\n                \"epub\": {\n                    \"isAvailable\": false\n                },\n                \"pdf\": {\n                    \"isAvailable\": false\n                },\n                \"webReaderLink\": \"http://play.google.com/books/reader?id=Jr5ZAAAAMAAJ&hl=&printsec=frontcover&source=gbs_api\",\n                \"accessViewStatus\": \"NONE\",\n                \"quoteSharingAllowed\": false\n            },\n            \"searchInfo\": {\n                \"textSnippet\": \"The novel is Faulknerian not only in its evocation of the familiar Southern <b>Gothic</b> air of evil and almost meteorological ... The <b>Sound and the Fury</b> and As I Lay Dying are especially prominent as original sources for the funeral setting&nbsp;...\"\n            }\n        }\n    ]\n}"
+				},
+				{
+					"name": "GET Books Error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/book",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"book"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "The Sound and the Fury",
+									"disabled": true
+								},
+								{
+									"key": "author",
+									"value": "William Faulkner",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"description": "Minimum 10, maximum 50, default 10",
+									"disabled": true
+								},
+								{
+									"key": "startIndex",
+									"value": "0",
+									"description": "default 0",
+									"disabled": true
+								},
+								{
+									"key": "keyword",
+									"value": "gothic",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "114"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"72-DQwu5zjVAM/1+oR3ZLMTW0zeoCk\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Feb 2022 11:43:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Bad request\",\n    \"status\": 400,\n    \"data\": {\n        \"_error\": \"At least one title/author/keyword parameter is required\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "POST /bookmark",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwiaWF0IjoxNjQ0NzU0OTYzLCJleHAiOjE2NDQ3NTg1NjN9.5GTiv2NoVzXvEU89qycfnnEV0lRk_Wpu4dtdlfnG4dc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"googleId\": \"fvwLjVZRlpsC\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/bookmark",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bookmark"
+					]
+				},
+				"description": "Add bookmark. googleId parameter is required.\n\nJwt token in the authorization header must be present."
+			},
+			"response": [
+				{
+					"name": "Add Bookmark Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwiaWF0IjoxNjQ0NzU0OTYzLCJleHAiOjE2NDQ3NTg1NjN9.5GTiv2NoVzXvEU89qycfnnEV0lRk_Wpu4dtdlfnG4dc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"googleId\": \"fvwLjVZRlpsC\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/bookmark",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bookmark"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "166"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a6-BRDosVdfhZbkoH8vaT7yOd87ALE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Feb 2022 12:22:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Success\",\n    \"status\": 200,\n    \"data\": {\n        \"id\": 8,\n        \"googleId\": \"fvwLjVZRlpsC\",\n        \"title\": \"The Tangled Fire of William Faulkner\",\n        \"author\": \"William Van O'Connor\",\n        \"UserId\": 3\n    }\n}"
+				},
+				{
+					"name": "Add Bookmark Error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwiaWF0IjoxNjQ0NzU0OTYzLCJleHAiOjE2NDQ3NTg1NjN9.5GTiv2NoVzXvEU89qycfnnEV0lRk_Wpu4dtdlfnG4dc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"googleId\": \"fvwLjVZRlpsC\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/bookmark",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bookmark"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "60"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3c-KUYebZwMcYq7fQfYgygHfm5dzkU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Feb 2022 12:23:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Bookmark already exists\",\n    \"status\": 400,\n    \"data\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "POST auth/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"example@example.com\",\r\n    \"password\": \"0123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"example@example.com\",\r\n    \"password\": \"0123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "268"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10c-fQhx/BRKN3s9ivUwgvFiqOyUQWI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Feb 2022 11:46:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Success\",\n    \"status\": 200,\n    \"data\": {\n        \"id\": 3,\n        \"email\": \"example@example.com\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwiaWF0IjoxNjQ0NzUyODE5LCJleHAiOjE2NDQ3NTY0MTl9.f34hfNmkmyuD2lCX1Z6FXPdlz_YBd6bZc4_7SDm62xM\"\n    }\n}"
+				},
+				{
+					"name": "Login Error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"example@example.com\",\r\n    \"password\": \"012345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "56"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"38-6hc3VKhtjbixcmCxFN9YtUhVcAY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Feb 2022 11:47:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Invalid credentials\",\n    \"status\": 401,\n    \"data\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "POST auth/signup",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"example@example.com\",\r\n    \"password\": \"0123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"signup"
+					]
+				},
+				"description": "Register operation. Email and password is required."
+			},
+			"response": [
+				{
+					"name": "Signup Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"example@example.com\",\r\n    \"password\": \"0123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "268"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10c-R1xCjxf0tc6t3iYUTdNbtbjnv/M\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Feb 2022 11:45:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Success\",\n    \"status\": 200,\n    \"data\": {\n        \"email\": \"example@example.com\",\n        \"id\": 3,\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJleGFtcGxlQGV4YW1wbGUuY29tIiwiaWF0IjoxNjQ0NzUyNzIwLCJleHAiOjE2NDQ3NTYzMjB9.uR3Y6vBleOa4SJ-SPvlZp7GZcE-u63exq-OujUms_ao\"\n    }\n}"
+				},
+				{
+					"name": "Signup Error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"exampleexample.com\",\r\n    \"password\": \"012345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "131"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"83-CoEcNU3AFAddeGnFmtJbyCTnihE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Feb 2022 11:46:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Bad request\",\n    \"status\": 400,\n    \"data\": {\n        \"email\": \"Email is invalid\",\n        \"password\": \"Password must be at least 8 characters long\"\n    }\n}"
+				}
+			]
+		}
+	]
+}
